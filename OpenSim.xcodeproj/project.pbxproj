@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09CF2373237911430087B939 /* RevealBundleInFinderAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF2372237911430087B939 /* RevealBundleInFinderAction.swift */; };
 		256B782C2278A08500052809 /* LaunchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256B782B2278A08500052809 /* LaunchAction.swift */; };
 		312A27FD21A753E600699668 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312A27FC21A753E600699668 /* Constants.swift */; };
 		31A79B15219B81660024DF7B /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A79B14219B81660024DF7B /* Simulator.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09CF2372237911430087B939 /* RevealBundleInFinderAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealBundleInFinderAction.swift; sourceTree = "<group>"; };
 		256B782B2278A08500052809 /* LaunchAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchAction.swift; sourceTree = "<group>"; };
 		312A27FC21A753E600699668 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		31A79B14219B81660024DF7B /* Simulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		B39B2B6D1EBF511200CDD74C /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				09CF2372237911430087B939 /* RevealBundleInFinderAction.swift */,
 				B39B2B6B1EBF510F00CDD74C /* RevealInFinderAction.swift */,
 				B39B2B6E1EBF567F00CDD74C /* CopyToPasteboardAction.swift */,
 				B39B2B701EBF56F200CDD74C /* OpenInTerminalAction.swift */,
@@ -221,21 +224,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Luo Sheng";
 				TargetAttributes = {
 					B3A1E31E1BF049690090EC58 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
 			buildConfigurationList = B3A1E31A1BF049690090EC58 /* Build configuration list for PBXProject "OpenSim" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				"pt-BR",
@@ -280,6 +282,7 @@
 				B3A1E3341BF0709A0090EC58 /* URLHelper.swift in Sources */,
 				B537A3F3228D2D1400E6E51E /* SimulatorMenuItem.swift in Sources */,
 				B3D188E91BF436480064E851 /* Runtime.swift in Sources */,
+				09CF2373237911430087B939 /* RevealBundleInFinderAction.swift in Sources */,
 				B39B2B791EBF614400CDD74C /* OpenRealmAction.swift in Sources */,
 				B39B2B771EBF5F4200CDD74C /* ExtraApplicationActionable.swift in Sources */,
 				B39B2B751EBF58EC00CDD74C /* OpenInItermAction.swift in Sources */,
@@ -431,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = OpenSim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -438,7 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pop-tap.OpenSim";
 				PRODUCT_NAME = OpenSim;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -446,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = OpenSim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -454,7 +459,7 @@
 				PRODUCT_NAME = OpenSim;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

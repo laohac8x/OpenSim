@@ -13,6 +13,7 @@ final class ActionMenu: NSMenu {
     private weak var application: Application!
     
     private static let standardActions: [ApplicationActionable.Type] = [
+        RevealBundleInFinderAction.self,
         RevealInFinderAction.self,
         CopyToPasteboardAction.self,
         OpenInTerminalAction.self,

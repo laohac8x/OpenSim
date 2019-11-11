@@ -61,6 +61,18 @@ extension Device {
         }).first
     }
     
+    public func bundleURLForApplication(_ application: Application) -> URL? {
+        let URL = URLHelper.bundlesURLForUDID(UDID)
+        let directories = try? FileManager.default.contentsOfDirectory(at: URL, includingPropertiesForKeys: nil, options: .skipsSubdirectoryDescendants)
+        return directories?.filter({ (dir) -> Bool in
+            if let contents = NSDictionary(contentsOf: dir.appendingPathComponent(".com.apple.mobile_container_manager.metadata.plist")),
+                let identifier = contents["MCMMetadataIdentifier"] as? String, identifier == application.bundleID {
+                return true
+            }
+            return false
+        }).first
+    }
+    
     func launch() {
         if state != .booted {
             SimulatorController.boot(self)

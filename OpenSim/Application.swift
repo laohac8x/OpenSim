@@ -31,6 +31,15 @@ final class Application {
         }
         return url
     }
+    
+    var bundleUrl: URL? {
+        guard let url = device.bundleURLForApplication(self),
+            FileManager.default.fileExists(atPath: url.path)
+            else {
+                return nil
+        }
+        return url
+    }
 
     init?(device: Device, url: Foundation.URL) {
         self.device = device
